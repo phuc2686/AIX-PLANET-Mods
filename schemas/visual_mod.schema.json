@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "effects": {
+      "additionalProperties": false,
+      "properties": {
+        "badge": {
+          "type": "string"
+        },
+        "color": {
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "type": "string"
+        },
+        "visual_id": {
+          "pattern": "^[a-z0-9_]+$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "visual_id"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "pattern": "^[a-z0-9_]+$",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "trigger": {
+      "additionalProperties": false,
+      "description": "All present conditions must hold for a living core to morph.",
+      "properties": {
+        "count_min": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "stage_min": {
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "strategy": {
+          "enum": [
+            "ZERG",
+            "PREDATOR",
+            "TURTLE",
+            "NOMAD"
+          ],
+          "type": "string"
+        },
+        "terrain": {
+          "enum": [
+            "WATER",
+            "FOREST",
+            "PLAINS",
+            "DESERT",
+            "MOUNTAIN",
+            "TUNDRA",
+            "SWAMP",
+            "JUNGLE"
+          ],
+          "type": "string"
+        },
+        "traits": {
+          "additionalProperties": false,
+          "properties": {
+            "combat_morph_min": {
+              "type": "integer"
+            },
+            "metabolism_min": {
+              "type": "integer"
+            },
+            "mobility_min": {
+              "type": "integer"
+            },
+            "thermal_max": {
+              "type": "integer"
+            },
+            "thermal_min": {
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "type": {
+      "const": "visual_morph"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "type",
+    "trigger",
+    "effects"
+  ],
+  "title": "AIX PLANET visual morph mod (mods/visuals/*.json)",
+  "type": "object"
+}

@@ -1,0 +1,9 @@
+{
+    "id": "bloom_festival",
+    "name": "Bloom Festival (example drop-in mod)",
+    "version": "1.0.0",
+    "author": "AIX-PLANET",
+    "description": "Mod mau: moi 96 tick to chuc Le Hoi Hoa No (BLOOM) tai vung dong dan nhat.",
+    "api_version": "1",
+    "enabled": true
+}

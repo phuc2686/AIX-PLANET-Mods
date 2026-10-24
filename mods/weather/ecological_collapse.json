@@ -1,0 +1,14 @@
+{
+  "id": "ecological_collapse",
+  "name": "Sụp Đổ Sinh Thái (Ecological Collapse)",
+  "type": "weather_trigger",
+  "trigger": {
+    "cell_population_min": 15000
+  },
+  "effects": {
+    "event_type": "DROUGHT",
+    "temp_delta": 15.0,
+    "radius_k": 1,
+    "duration_ticks": 3
+  }
+}

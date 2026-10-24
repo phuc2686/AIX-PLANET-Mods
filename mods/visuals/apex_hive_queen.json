@@ -1,0 +1,15 @@
+{
+  "id": "apex_hive_queen",
+  "name": "Nữ Chúa Bầy Đàn (Apex Hive Queen)",
+  "type": "visual_morph",
+  "trigger": {
+    "stage_min": 3,
+    "strategy": "ZERG",
+    "count_min": 10000
+  },
+  "effects": {
+    "visual_id": "apex_hive_queen",
+    "badge": "👑 Hive Queen",
+    "color": "#bf00ff"
+  }
+}

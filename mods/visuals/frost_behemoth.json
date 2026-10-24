@@ -1,0 +1,18 @@
+{
+  "id": "frost_behemoth",
+  "name": "Cự Thú Băng Giá (Frost Behemoth)",
+  "type": "visual_morph",
+  "trigger": {
+    "stage_min": 2,
+    "terrain": "TUNDRA",
+    "traits": {
+      "thermal_max": -3,
+      "combat_morph_min": 3
+    }
+  },
+  "effects": {
+    "visual_id": "frost_behemoth",
+    "badge": "❄️ Behemoth",
+    "color": "#a0e0ff"
+  }
+}

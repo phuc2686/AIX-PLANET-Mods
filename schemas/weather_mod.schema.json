@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "effects": {
+      "additionalProperties": false,
+      "properties": {
+        "duration_ticks": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "event_type": {
+          "enum": [
+            "ICE_AGE",
+            "DROUGHT",
+            "ACID_RAIN",
+            "METEOR",
+            "BLOOM",
+            "WARM_FRONT"
+          ],
+          "type": "string"
+        },
+        "radius_k": {
+          "maximum": 3,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "temp_delta": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "event_type"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "pattern": "^[a-z0-9_]+$",
+      "type": "string"
+    },
+    "name": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "trigger": {
+      "additionalProperties": false,
+      "description": "Fires on any cell whose total living population meets the threshold.",
+      "properties": {
+        "cell_population_min": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "type": {
+      "const": "weather_trigger"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "type",
+    "trigger",
+    "effects"
+  ],
+  "title": "AIX PLANET weather scenario mod (mods/weather/*.json)",
+  "type": "object"
+}

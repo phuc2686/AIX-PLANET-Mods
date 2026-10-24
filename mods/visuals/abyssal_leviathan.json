@@ -1,0 +1,18 @@
+{
+  "id": "abyssal_leviathan",
+  "name": "Thủy Quái Vực Sâu (Abyssal Leviathan)",
+  "type": "visual_morph",
+  "trigger": {
+    "stage_min": 2,
+    "terrain": "WATER",
+    "count_min": 3000,
+    "traits": {
+      "mobility_min": 3
+    }
+  },
+  "effects": {
+    "visual_id": "abyssal_leviathan",
+    "badge": "🌊 Leviathan",
+    "color": "#00f0ff"
+  }
+}
