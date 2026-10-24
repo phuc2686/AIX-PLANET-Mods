@@ -1,5 +1,7 @@
 # Contributing a Mod to AIX PLANET
 
+(Bản tiếng Việt: [CONTRIBUTING.vi.md](CONTRIBUTING.vi.md))
+
 Thanks for building for the planet. This repo is the only public surface of a
 closed-source game, so the rules below keep mods safe, original and shippable.
 
